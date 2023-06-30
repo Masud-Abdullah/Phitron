@@ -1,0 +1,7 @@
+The procedure of creating a dynamic array named 'arr' of integer data type is showing below:
+int* arr = new int[size];
+1/ The benefit of creating a dynamic array is if we want then we can delete the array from the heap memory before 
+the programme ends. It saves our memory space.
+2/ We can return dynamic array in main function from a function and print the whole array in main function.
+3/ We can increase the size of dynamic array.
+

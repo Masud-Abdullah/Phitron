@@ -1,0 +1,10 @@
+In C programming, there are two ways to pass arguments to functions: pass by value and pass by reference.
+
+1/ Pass by Value:
+Pass by value means that a copy of the argument's value is passed to the function. 
+This means that any changes made to the argument within the function do not affect
+ the original value outside of the function. 
+
+2/ Pass by Reference:
+Pass by reference means that a reference to the argument's memory location is passed to the function. 
+This means that any changes made to the argument within the function will affect the original value outside of the function. 

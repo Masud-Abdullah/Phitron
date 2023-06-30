@@ -1,0 +1,27 @@
+There can be many case in String lexicographical comparison.
+
+First Case:
+   A   <    B
+
+   ab      abcd  
+   01'\0   0123'\0
+
+   Second Case:
+      A    >    B
+
+      abcd     ab
+      0123'\0  01'\0
+
+      Third Case:
+
+      A    ==    B
+
+      abc        abc
+      012'\0'    012'\0'
+
+      Forth Case:
+       A    <    b
+
+       abcd      adef
+
+       0123'\0'  0123'\0'

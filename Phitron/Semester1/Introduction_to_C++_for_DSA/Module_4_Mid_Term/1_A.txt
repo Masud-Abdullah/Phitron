@@ -1,0 +1,7 @@
+Stack Memory: Stack memory is a memory where we can't delete our data until the programme ends. 
+In stack memory we can't our increase the size after declaring any array or charracter array. It is compile time memory.
+
+Heap Memory: Heap memory is a memory where we can delete our data before the programme ends.
+In heap memory we can increase the size after declaring any array or charracter array. It is compile time memory.
+
+

@@ -1,0 +1,27 @@
+//Problem Link: https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/C
+
+#include<stdio.h>
+int main()
+{
+     int n;
+     scanf("%d",&n);
+     int a;
+     int even=0,odd=0,pos=0,neg=0;
+
+     for(int i=1;i<=n;i++)
+     {
+         scanf("%d",&a);
+
+         if(a>0)pos++;
+
+         if(a<0)neg++;
+
+         if(a%2==0)even++;
+
+         if(a%2!=0)odd++;
+     }
+
+     printf("Even: %d\nOdd: %d\n Positive: %d\nNegative: %d\n",even,odd,pos,neg);
+    
+    return 0;
+}

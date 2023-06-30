@@ -1,0 +1,11 @@
+A class is a template that defines the characteristics and behavior of objects. Class has 
+one or more variables. In main function we have to create some object of the class. after that we can access 
+the variables of class by using dot(.) operator in between the object and variable name. For dynamic object we have to use
+'->' sine  in between the object and variable name for access the variable of class.
+ Declaration of an object: 
+
+ int main()
+ {
+    Class_name object_name;
+ }
+ Here class_name is like a data type and object_name is like a variable.

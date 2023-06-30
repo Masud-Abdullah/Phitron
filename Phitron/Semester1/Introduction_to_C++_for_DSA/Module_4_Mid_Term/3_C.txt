@@ -1,0 +1,3 @@
+We need -> (arrow sign) for accessing the data members of an dynamic object.
+As dynamic object is a pointer thats why we cannot access it's data members by using dot operator. We can access them by direfference 
+or using -> (arrow sign).

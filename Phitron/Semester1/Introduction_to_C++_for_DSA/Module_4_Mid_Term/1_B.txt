@@ -1,0 +1,7 @@
+Dynamic memory allocation is necessary in programming when we need to allocate memory for data at runtime, 
+when the size of the data cannot be determined at compile time.
+Example: 
+1/ If we want to create a dynamic array that time we need dynamic memory allocation.
+2/ If we want to increase the size of an array that time we need dynamic memory allocation.
+3/ In Object Oriented Programming we use dynamic memory allocation for creating dynamic object. 
+4/We can return dynamic array from any function to main function and we can print the whole array in main function.
