@@ -37,6 +37,7 @@ int main()
     st.pop();
     cout << st.top() << endl;
     st.pop();
+    
     if (st.empty() == true)
     {
         cout << "Invalid\n";
