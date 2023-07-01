@@ -33,6 +33,7 @@ int main()
     myStack st;
     int n;
     cin >> n;
+
     for (int i = 1; i <= n; i++)
     {
         int x;
