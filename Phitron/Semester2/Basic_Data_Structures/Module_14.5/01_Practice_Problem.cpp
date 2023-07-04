@@ -5,11 +5,13 @@ class Node
 public:
     int val;
     Node *next;
+    Node *prev;
 
     Node(int val)
     {
         this->val = val;
         this->next = NULL;
+        this->prev = NULL;
     }
 };
 class myStack
@@ -29,11 +31,38 @@ public:
             return;
         }
         tail->next = newNode;
+        newNode->prev = tail;
         tail = tail->next;
+    }
+    void pop()
+    {
+        sz--;
+        Node *deleteNode = tail; // O(1)
+        tail = tail->prev;
+        if (tail == NULL)
+        {
+            head == NULL;
+        }
+        else
+        {
+            tail->next = NULL;
+        }
+        delete deleteNode;
+    }
+    int top()
+    {
+        return tail->val; // O(1)
     }
     int size()
     {
-        return sz;
+        return sz; // O(1)
+    }
+    bool empty()
+    {
+        if (sz == 0)
+            return true; // O(1)
+        else
+            return false;
     }
 };
 int main()
@@ -64,18 +93,16 @@ int main()
     }
 
     bool f = true;
-    Node *tm1 = st1.head;
-    Node *tm2 = st2.head;
 
-    for (int i = 1; i <= n; i++)
+    while (!st1.empty())
     {
-        if (tm1->val != tm2->val)
+        if (st1.top() != st2.top())
         {
             f = false;
             break;
         }
-        tm1 = tm1->next;
-        tm2 = tm2->next;
+        st1.pop();
+        st2.pop();
     }
 
     if (f)
