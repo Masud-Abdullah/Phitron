@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {    ///Phitro's Code collected from Asif Abdullah Ine Saifullah
+
     int n,q;
     cin>>n>>q;
     int a[n];
