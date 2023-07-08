@@ -42,6 +42,7 @@ int main()
 {
     Node *head = NULL;
     Node *tail = NULL;
+    
     while (true)
     {
         int val;
