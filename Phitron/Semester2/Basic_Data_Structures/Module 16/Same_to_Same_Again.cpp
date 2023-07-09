@@ -20,6 +20,7 @@ public:
     Node *head = NULL;
     Node *tail = NULL;
     int sz = 0;
+
     void push(int val)
     {
         sz++;
