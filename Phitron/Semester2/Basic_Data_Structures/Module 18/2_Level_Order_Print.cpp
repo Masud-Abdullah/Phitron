@@ -15,6 +15,10 @@ public:
 };
 void level_Order(Node *root)
 {
+    if (root == NULL)
+    {
+        cout << "Tree Nai\n";
+    }
     // Level Order print a queue use korte hobe.
     queue<Node *> q;
     q.push(root);
