@@ -13,12 +13,13 @@ public:
         this->right = NULL;
     }
 };
-void preorder(Node *root)
+void preorder(Node *root)   //preorder: root-left-right
 {
     if (root == NULL)
     {
         return;
     }
+    
     cout << root->val << " ";
     preorder(root->left);
     preorder(root->right);

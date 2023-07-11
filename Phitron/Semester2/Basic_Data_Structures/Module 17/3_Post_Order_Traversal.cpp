@@ -19,7 +19,8 @@ void postorder(Node *root)
     {
         return;
     }
-    postorder(root->left);
+    
+    postorder(root->left);     //postorder: left-right-root
     postorder(root->right);
     cout << root->val << " ";
 }
