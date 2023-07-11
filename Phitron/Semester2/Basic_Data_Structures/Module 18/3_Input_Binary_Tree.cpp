@@ -59,12 +59,14 @@ Node *Input_Tree()
         if (parent->right)
             q.push(parent->right);
     }
+    return root;
 }
 void level_Order(Node *root)
 {
     if (root == NULL)
     {
         cout << "Tree Nai\n";
+        return;
     }
     // Level Order print a queue use korte hobe.
     queue<Node *> q;
@@ -72,21 +74,25 @@ void level_Order(Node *root)
     while (!q.empty())
     {
         // 1. ber kore ana
-        Node *f = q.front();
+        Node *parent = q.front();
         q.pop();
 
         // 2. jabotiyo ja kaj ase
-        cout << f->val << " ";
+        cout << parent->val << " ";
 
         // 3. tar children guloke rakha
-        if (f->left)
-            q.push(f->left);
-        if (f->right)
-            q.push(f->right);
+        if (parent->left)
+            q.push(parent->left);
+        if (parent->right)
+            q.push(parent->right);
     }
 }
 int main()
 {
+    Node *root = Input_Tree();
+    level_Order(root);
 
+    // Input: 10 20 60 30 50 70 -1 -1 40 -1 -1 -1 -1 80 -1 -1 -1
+    // Output: 10 20 60 30 50 70 40 80
     return 0;
 }
