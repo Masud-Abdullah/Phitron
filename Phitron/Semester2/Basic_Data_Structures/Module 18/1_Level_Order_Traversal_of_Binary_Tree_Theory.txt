@@ -1,0 +1,5 @@
+1/ Line theke ano
+2/ jabotiyo ja kaj ache ta koro (print koro).
+3/ tar children guloke line a diye jao
+
+////Reminder : Level order print a always queue use korte hobe.
