@@ -1,0 +1,17 @@
+1/ Kono binary tree er proti ta root er left and right node exist korle 
+oi binary tree ke bole perfect binary tree.
+
+2/ Kono binary tree er last level bade baki shob level er protita root er 
+left and right node exist korle and last level ta left theke right er dike fill hole 
+oi binary tree ke complete binary tree bole.
+
+3/ So we can say that all perfect binary tree is a complete binary tree 
+but all complete binary tree is not a perfect binary tree.
+
+///// Complete binary tree ke level order a ekta array te store korle nicher formula gula use kora jabe.
+
+4/ parent theke left children ber korar formula: 2*i+1
+   parent theke right children ber korar formula: 2*i+2
+   children theke parent ber korar formula: (i-1)/2 
+
+   **Ekhane i diye index bujhacche jeta 0 theke start hoy**
