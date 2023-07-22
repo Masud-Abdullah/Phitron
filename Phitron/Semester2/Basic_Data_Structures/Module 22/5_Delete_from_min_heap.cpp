@@ -90,8 +90,12 @@ int main()
         insert_heap(v, x); // O(logn)  //ekta insert korte logn
     }
 
-    print(v);   //3 15 5 30 20 25 6
+    print(v); // 3 15 5 30 20 25 6
+
     delete_heap(v);
-    print(v);   //5 15 6 30 20 25
+    print(v); // 5 15 6 30 20 25
+
+    delete_heap(v);
+    print(v); // 6 15 25 30 20
     return 0;
 }
