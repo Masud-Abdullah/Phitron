@@ -93,5 +93,6 @@ int main()
 {
     Node *root = Input_Tree();
     printTree(root);
+    
     return 0;
 }

@@ -83,5 +83,6 @@ int main()
     Node *root = Input_Tree();
     Leaf(root);
     cout << mx << " " << mn << endl;
+    
     return 0;
 }

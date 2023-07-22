@@ -75,5 +75,6 @@ int main()
 {
     Node *root = Input_Tree();
     cout << sumOfTree(root) << endl;
+    
     return 0;
 }
