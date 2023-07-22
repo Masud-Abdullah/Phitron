@@ -8,7 +8,7 @@ void insert_heap(vector<int> &v, int x)
 
     while (cur_indx != 0)
     {
-        if (v[cur_indx] > v[prnt_indx]) // child index er value boro holei swap hoy //
+        if (v[cur_indx] < v[prnt_indx]) // child index er value boro holei swap hoy //
         {
             swap(v[cur_indx], v[prnt_indx]);
         }
@@ -31,12 +31,12 @@ void delete_heap(vector<int> &v)
         if (left_indx <= last_indx && right_indx <= last_indx)
         {
             // duitai ache
-            if (v[left_indx] >= v[right_indx] && v[left_indx] > v[cur])
+            if (v[left_indx] <= v[right_indx] && v[left_indx] < v[cur])
             {
                 swap(v[left_indx], v[cur]);
                 cur = left_indx;
             }
-            else if (v[right_indx] >= v[left_indx] && v[right_indx] > v[cur])
+            else if (v[right_indx] <= v[left_indx] && v[right_indx] < v[cur])
             {
                 swap(v[right_indx], v[cur]);
                 cur = right_indx;
@@ -47,7 +47,7 @@ void delete_heap(vector<int> &v)
         else if (left_indx <= last_indx)
         {
             // left ache
-            if (v[left_indx] > v[cur])
+            if (v[left_indx] < v[cur])
             {
                 swap(v[left_indx], v[cur]);
                 cur = left_indx;
@@ -58,7 +58,7 @@ void delete_heap(vector<int> &v)
         else if (right_indx <= last_indx)
         {
             // right ache
-            if (v[right_indx] > v[cur])
+            if (v[right_indx] < v[cur])
             {
                 swap(v[right_indx], v[cur]);
                 cur = right_indx;
@@ -90,13 +90,8 @@ int main()
         insert_heap(v, x); // O(logn)  //ekta insert korte logn
     }
 
-    print(v); //normal //30 20 25 15 5 6 3
-
+    print(v);   //3 15 5 30 20 25 6
     delete_heap(v);
-    print(v);       // 25 20 6 15 5 3
-    delete_heap(v); // ekta delete krte O(logn) r sob krte O(nlogn)
-    print(v);       // 20 15 6 3 5
-    delete_heap(v);
-    print(v); // 15 5 6 3
+    print(v);   //5 15 6 30 20 25
     return 0;
 }
