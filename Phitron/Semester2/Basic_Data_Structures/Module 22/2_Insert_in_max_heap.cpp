@@ -2,35 +2,40 @@
 using namespace std;
 int main()
 {
-    vector<int> v = {50, 40, 45, 30, 35, 42, 32, 25, 20, 10};
-    int x;
-    cin >> x;
-    v.push_back(x);
-    int cur_indx = v.size() - 1;          // parent theke child index ber korar formula
-    // cout << cur_indx << endl;
-    int prnt_indx = (cur_indx - 1) / 2;   // parent index ber korar formula
-    // cout << prnt_indx << endl;
-
-    while (cur_indx != 0)
+    vector<int> v;
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++)
     {
-        if (v[cur_indx] > v[prnt_indx])  // child index er value boro holei swap hoy //
+        int x;
+        cin >> x;
+        v.push_back(x);              // 10 30 40 50 60
+        int cur_indx = v.size() - 1; // parent theke child index ber korar formula
+        // cout << cur_indx << endl;
+        int prnt_indx = (cur_indx - 1) / 2; // parent index ber korar formula
+        // cout << prnt_indx << endl;
+
+        while (cur_indx != 0)
         {
-            swap(v[cur_indx] , v[prnt_indx]);
+            if (v[cur_indx] > v[prnt_indx]) // child index er value boro holei swap hoy //
+            {
+                swap(v[cur_indx], v[prnt_indx]);
+            }
+            else
+                break;
+            cur_indx = prnt_indx;
+            prnt_indx = (cur_indx - 1) / 2;
         }
-        else break;
-        cur_indx = prnt_indx;
-        prnt_indx = (cur_indx - 1) / 2;  
     }
 
-    for(int val : v)
+    for (int val : v)
     {
-        cout<<val<<" ";
+        cout << val << " "; // 60 50 30 10 40
     }
-    cout<<endl;
+    cout << endl;
 
     return 0;
 }
-
 
 //-----------------------------------------------------------
 
@@ -71,7 +76,7 @@ int main()
 
 /*
             while(cur_ind != 0){
-        
+
             int parent_ind = (cur_ind-1)/2;
 
             if(v[parent_ind] >= v[cur_ind]){
