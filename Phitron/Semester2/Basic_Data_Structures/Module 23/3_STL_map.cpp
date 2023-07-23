@@ -51,8 +51,8 @@ int main()
 
     // Let's check if the value is present or not
     if (mp.count("masud abdullah")) // mp.count() function true/false return kore.
-    {                                // masud abdullah er value 2 bar initialize krleu count 1 e asbe
-        cout << "Ase\n"; // ekhon pawa jabe
+    {                                        // masud abdullah er value 2 bar initialize krleu count 1 e asbe
+        cout << "Ase\n"; // ekhon pawa jabe   //ek index ekadikbar insert korle count barbe na just index er value update hobe
     }
     else
     {
