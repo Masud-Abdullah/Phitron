@@ -21,7 +21,7 @@ void merge(int l, int r, int mid)
     }
 
     L[left_size] = INT_MAX; // infinity
-    R[right_size] = INT_MAX;
+    R[right_size] = INT_MAX;  //last value infinity jate kono array te soman er cheye besi value thakle segula jeno infinity er sathe tulona diye choto hoy and ses a bose jay
 
     int lp = 0, rp = 0;
     for (int i = l; i <= r; i++)
