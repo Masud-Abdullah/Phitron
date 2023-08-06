@@ -47,5 +47,6 @@ int main()
         cout << c[i] << " ";
     }
     cout << '\n';
+    
     return 0;
 }
