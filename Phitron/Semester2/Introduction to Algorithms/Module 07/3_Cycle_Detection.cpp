@@ -3,17 +3,24 @@ using namespace std;
 
 const int N = 1e5 + 5;
 vector<vector<int>> adj(N);
-bool visited[N];
+int visited[N];
 bool flag = false;
+int cnt = 0;
 
 bool dfs(int u)
 {
-    visited[u] = true;
+    visited[u]++;
     for (auto v : adj[u])
     {
         if (visited[v])
         {
             flag = true;
+            if (visited[v] == 1)
+            {
+                cnt++;
+                visited[v]++;
+                cout << u << " " << v << '\n';
+            }
             continue;
         }
         dfs(v);
@@ -39,12 +46,22 @@ int main()
         dfs(i);
     }
 
+    // for(int i=1;i<=n;i++)
+    // {
+    //     cout<<i<<" : "<<endl;
+    //     for(int j=0;j<adj[i].size();j++)
+    //     {
+    //         cout<<(adj[i])[j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
     if (flag)
         cout << "Cycle Detected\n";
     else
         cout << "No Cycle\n";
 
-    // cout << "Number of Connected Components is = " << cc << '\n';
+    cout << "Number of Cycle is = " << cnt << '\n';
 
     return 0;
 }
