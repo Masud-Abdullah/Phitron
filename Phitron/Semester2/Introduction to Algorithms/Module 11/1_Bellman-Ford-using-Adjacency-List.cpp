@@ -51,5 +51,6 @@ int main()
         cout << "Distance of " << i;
         cout << ": " << d[i] << endl;
     }
+    
     return 0;
 }
