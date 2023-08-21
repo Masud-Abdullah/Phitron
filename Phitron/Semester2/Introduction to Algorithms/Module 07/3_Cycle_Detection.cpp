@@ -18,13 +18,15 @@ bool dfs(int u)
             if (visited[v] == 1)
             {
                 cnt++;
-                visited[v]++;
+                //visited[v]++;
                 cout << u << " " << v << '\n';
             }
             continue;
         }
         dfs(v);
     }
+    visited[u]++;
+    //cout<<"Exit: "<<u<<endl;
     return flag;
 }
 int main()

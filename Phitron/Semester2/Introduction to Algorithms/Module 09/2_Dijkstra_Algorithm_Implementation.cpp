@@ -25,7 +25,7 @@ void dijkstra(int source)
             int v = vpair.first;
             int w = vpair.second;
 
-            // if(visited[v])continue;
+            if(visited[v])continue;
 
             if (dist[v] > dist[u] + w)
             {
@@ -52,7 +52,7 @@ int main()
 
     for (int i = 1; i <= n; i++)
     {
-        cout << "Distance od Node : " << dist[i] << endl;
+        cout << "Distance of Node : " << dist[i] << endl;
     }
     return 0;
 }
