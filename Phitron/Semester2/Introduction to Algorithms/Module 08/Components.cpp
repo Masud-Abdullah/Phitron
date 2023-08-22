@@ -47,6 +47,7 @@ int main()
         cout << ans[i] << " ";
     }
     cout << '\n';
+    
 
     return 0;
 }

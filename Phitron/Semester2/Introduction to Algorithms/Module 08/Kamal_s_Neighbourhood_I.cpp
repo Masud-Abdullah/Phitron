@@ -19,5 +19,6 @@ int main()
     cin >> K;
 
     cout << adj[K].size() << '\n';
+    
     return 0;
 }
