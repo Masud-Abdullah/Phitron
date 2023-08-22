@@ -7,6 +7,7 @@ void devide(int a[], int l, int r)
         cout << a[i] << " ";
     }
     cout << '\n';
+    
     if (l < r)
     {
         int mid = (l + r) / 2;
