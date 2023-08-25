@@ -8,7 +8,7 @@ const int INF = INT_MAX;
 vector<pii> adj[N];
 int dist[N];
 
-void dijkstra(int source)
+void dijkstra(int source) // O(Nodes*Edges) //O(N*E)
 {
     queue<int> q;
     q.push(source);
@@ -18,7 +18,7 @@ void dijkstra(int source)
     {
         int parent = q.front();
         q.pop();
-        for (auto child : adj[parent])
+        for (auto child : adj[parent]) // for(pair<int,int> child:adj[parent])
         {
             if (dist[parent] + child.second < dist[child.first])
             {
@@ -73,7 +73,9 @@ void dijkstra(int s){
         q.pop();
 
         for(int i=0; i<v[parent].size(); i++){
-            pair<int, int> child = v[parent][i];
+            // pair<int,int> child = v[parent][i];
+            // int ChildNode = child.first;
+            // int ChildCost = child.second;
 
             int childNode = v[parent][i].first;
             int childCost = v[parent][i].second;
