@@ -48,5 +48,6 @@ int main()
         }
     }
     cout << connectedComponents << endl;
+    
     return 0;
 }
