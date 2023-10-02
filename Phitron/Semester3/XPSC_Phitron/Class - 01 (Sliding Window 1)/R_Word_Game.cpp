@@ -51,8 +51,9 @@ int main()
             cout << sm << " ";
         }
         cout << '\n';
+        mp.clear();
     }
-    
+
 
     return 0;
 }
