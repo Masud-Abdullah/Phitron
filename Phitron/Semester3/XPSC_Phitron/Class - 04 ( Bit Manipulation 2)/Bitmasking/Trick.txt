@@ -1,0 +1,5 @@
+jodi (a & b & c & d) == x hoy tahole (a & x) ==x && (b & x) == x && (c & x) == x && (d & x) == x;
+kintu  (a & x) ==x && (b & x) == x && (c & x) == x && (d & x) == x hole je abbar (a & b & c & d) == x hobe etar surity nai. 
+hoteo pare abar nao hote pare.
+ ar jodi (a & x) ==x && (b & x) == x && (c & x) == x && (d & x) == x hoy and (a & b & c & d) != x shekhetre ekhan theke ekta or
+ ekadhik element bad diye than ogular and korleo x hobe na. example: (a & b & c & d) != x taile (a & b & c) != x
