@@ -55,7 +55,7 @@ int main()
         }
     }
 
-    cout << "Updated" << endl;
+    cout << endl << "After Applying Floyd Warshall: " << endl;
 
     for (int i = 1; i <= n; i++)
     {
