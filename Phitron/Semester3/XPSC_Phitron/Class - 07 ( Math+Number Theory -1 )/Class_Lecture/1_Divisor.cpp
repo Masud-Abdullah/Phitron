@@ -12,7 +12,7 @@ int main()
             divisor.push_back(i);
             if(n/i!=i)
             {
-                divisor.push_back(n/i);
+                divisor.push_back(n/i);    //sqrt Complexity
             }
         }
     }

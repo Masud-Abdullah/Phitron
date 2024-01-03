@@ -12,6 +12,7 @@
 #define   gcd(a, b)  __gcd(a, b)
 #define   lcm(a, b)  ((a/gcd(a,b)) * b)
 #define   pb         push_back
+#define   mp         make_pair
 #define   pii        pair<int,int>
 #define   pll        pair<long long,long long>
 #define   vii        vector< int >
@@ -21,6 +22,7 @@
 #define   sz(v)      v.size()
 #define   mm(a, x)   memset(a, x, sizeof(a))
 #define   pi         acos(-1.0)
+#define   ceil(a,b)  (a+b-1)/b
 #define   jog(v)     accumulate(v.begin(), v.end(), 0)
 #define   gun(v)     accumulate(v.begin(), v.end(), 1, multiplies<int>())
 #define   FIO        ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
@@ -55,15 +57,48 @@
 ///__builtin_ctz(x)   (__builtin_ctzll(x) for long long data type)  ---->>> This function is used to count the trailing zeros of the integer.
 
 using namespace std;
+const ll N = 1e5+7,mx=1e18+7;
+ll a[N],tree[3*N];
+void build(ll node,ll l,ll r)
+{
+    if(l==r)
+    {
+        tree[node]=a[l];
+        return;
+    }
+    ll leftNode=2*node;
+    ll rightNode=leftNode+1;
+    ll mid=l+(r-l)/2;
+    build(leftNode,l,mid);
+    build(rightNode,mid+1,r);
+    tree[node]=min(tree[leftNode],tree[rightNode]);
+}
+ll query(ll node,ll l,ll r,ll x,ll y)
+{
+    if(l>y || r<x)return mx;
+    if(x<=l && y>=r)return tree[node];
+    ll leftNode=2*node;
+    ll rightNode=leftNode+1;
+    ll mid=l+(r-l)/2;
+    return min(query(leftNode,l,mid,x,y),query(rightNode,mid+1,r,x,y));
+}
 int main()
 {
     FIO;
     ll t;cin>>t;
-    while(t--)
+    for(ll T=1;T<=t;T++)
     {
-        ll n;cin>>n;
-        for(ll i=1;i<=n;i++)cout<<1<<" ";
-        cout<<nl;
+        cout<<"Case "<<T<<":\n";
+        ll n,q;cin>>n>>q;
+        for(ll i=0;i<n;i++)cin>>a[i];
+        build(1,0,n-1);
+        while(q--)
+        {
+            ll x,y;cin>>x>>y;
+            x--,y--;
+           // cout<<x<<" "<<y<<" ";
+            cout<<query(1,0,n-1,x,y)<<nl;
+        }
     }
     return 0;
 }
